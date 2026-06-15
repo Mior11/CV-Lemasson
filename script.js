@@ -101,7 +101,8 @@ const projects = [
     schema: ["Utilisateur", "Menaces", "Bonnes pratiques"],
     code: "Objectifs :\n- Identifier les risques courants\n- Appliquer les bonnes pratiques\n- Sensibiliser un public non specialiste",
     skills: [["Cybersecurite de base", 75], ["Analyse des risques", 70], ["Communication", 72]],
-    docs: [["Support SAE 1.01", "PDF"], ["Synthese personnelle", "PDF"]]
+    docs: [["file": "assets/docs/cours-sae11-2023.pdf", "PDF"], ["file": "assets/docs/synthese-sae101.pdf", "PDF"]]
+    
   },
   {
     id: "sae102",
