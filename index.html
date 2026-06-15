@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio d'Ewan, etudiant en BUT Reseaux et Telecommunications.">
+  <title>Ewan.dev - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="pw">
+    <nav class="p-nav" aria-label="Navigation principale">
+      <button class="p-nav-logo" type="button" data-section-link="home">Ewan<span>.</span>dev</button>
+
+      <div class="p-nav-links" id="navLinks">
+        <button class="active" type="button" data-section-link="home" data-key="nav_home">Accueil</button>
+        <button type="button" data-section-link="about" data-key="nav_about">A propos</button>
+        <button type="button" data-section-link="projects" data-key="nav_projects">Mes projets</button>
+        <button type="button" data-section-link="contact" data-key="nav_contact">Contact</button>
+      </div>
+
+      <div class="nav-right">
+        <div class="lang-switcher" aria-label="Choix de la langue">
+          <button class="lang-btn active" type="button" data-lang="fr">FR</button>
+          <button class="lang-btn" type="button" data-lang="en">EN</button>
+        </div>
+        <a class="p-cv-btn" href="cv.pdf" download data-key="nav_cv">
+          <i class="ti ti-download" aria-hidden="true"></i>
+          Telecharger CV
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="section active" id="s-home" aria-labelledby="home-title">
+        <div class="hero">
+          <div class="hero-text">
+            <p class="hero-tag" data-key="hero_tag">BUT Reseaux & Telecoms - Annee 1</p>
+            <h1 id="home-title">Salut, je suis <span>Ewan</span></h1>
+            <p class="hero-sub" data-key="hero_sub">Etudiant en Reseaux & Telecoms a l'IUT. Passionne par l'infrastructure, le deploiement et les projets qui fonctionnent vraiment.</p>
+            <div class="hero-btns">
+              <button class="btn-primary" type="button" data-section-link="projects" data-key="hero_btn1">Voir mes projets</button>
+              <button class="btn-outline" type="button" data-section-link="contact" data-key="hero_btn2">Me contacter</button>
+            </div>
+            <div class="hero-stats" aria-label="Statistiques rapides">
+              <div class="stat-item"><strong class="stat-num">10</strong><span class="stat-label" data-key="stat1">Projets SAE</span></div>
+              <div class="stat-item"><strong class="stat-num">BUT1</strong><span class="stat-label" data-key="stat2">Annee d'etudes</span></div>
+              <div class="stat-item"><strong class="stat-num">S1/S2</strong><span class="stat-label" data-key="stat3">Semestres BUT1</span></div>
+            </div>
+          </div>
+          <div class="hero-avatar" aria-hidden="true">E</div>
+        </div>
+      </section>
+
+      <section class="section" id="s-about" aria-labelledby="about-title">
+        <div class="content-wrap">
+          <h2 class="section-title" id="about-title" data-key="about_title">A propos de <span>moi</span></h2>
+          <p class="section-sub" data-key="about_sub">Un apercu de mon profil et des technologies que j'utilise.</p>
+
+          <div class="about-grid">
+            <article class="info-card">
+              <h3><i class="ti ti-user" aria-hidden="true"></i><span data-key="ab1">Profil</span></h3>
+              <p data-key="ab1b">Etudiant en premiere annee de BUT Reseaux & Telecommunications. J'aime comprendre comment les systemes communiquent, monter des infrastructures serveur et resoudre[...]
+            </article>
+
+            <article class="info-card">
+              <h3><i class="ti ti-school" aria-hidden="true"></i><span data-key="ab2">Formation</span></h3>
+              <p data-key="ab2b">BUT Reseaux & Telecommunications - IUT<br>Baccalaureat avec specialites Mathematiques et NSI.</p>
+            </article>
+
+            <article class="info-card wide">
+              <h3><i class="ti ti-tools" aria-hidden="true"></i><span data-key="ab3">Competences techniques</span></h3>
+              <div class="skills-wrap">
+                <span>Linux / Ubuntu Server</span>
+                <span>VirtualBox</span>
+                <span>Django</span>
+                <span>Python</span>
+                <span>MariaDB / MySQL</span>
+                <span>Nginx</span>
+                <span>NAT / intnet</span>
+                <span>TCP/IP</span>
+                <span>HTML / CSS</span>
+                <span>Git</span>
+                <span>Bash scripting</span>
+                <span>Wireshark</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="s-projects" aria-labelledby="projects-title">
+        <div class="content-wrap">
+          <h2 class="section-title" id="projects-title" data-key="proj_title">Mes <span>projets</span></h2>
+          <p class="section-sub" data-key="proj_sub">Projets SAE de BUT1 Reseaux & Telecoms. Clique sur un projet pour voir les details.</p>
+          <div class="proj-grid" id="projectGrid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="s-detail" aria-labelledby="d-title">
+        <div class="content-wrap">
+          <button class="back-btn" type="button" id="backToProjects">
+            <i class="ti ti-arrow-left" aria-hidden="true"></i>
+            <span data-key="back_btn">Retour aux projets</span>
+          </button>
+
+          <div class="detail-header">
+            <div class="detail-icon" id="d-icon" aria-hidden="true"></div>
+            <div class="detail-meta">
+              <span class="proj-badge" id="d-badge"></span>
+              <h2 id="d-title"></h2>
+              <div class="detail-tags" id="d-tags"></div>
+            </div>
+          </div>
+
+          <div class="detail-body">
+            <article class="detail-card full">
+              <h3><i class="ti ti-file-text" aria-hidden="true"></i><span data-key="desc_title">Description du projet</span></h3>
+              <p id="d-desc"></p>
+            </article>
+
+            <article class="detail-card">
+              <h3><i class="ti ti-photo" aria-hidden="true"></i><span data-key="screenshots_title">Captures & preuves</span></h3>
+              <div class="screenshot-grid" id="d-screenshots"></div>
+            </article>
+
+            <article class="detail-card">
+              <h3><i class="ti ti-topology-star" aria-hidden="true"></i><span data-key="schema_title">Schema d'architecture</span></h3>
+              <div id="d-schema"></div>
+            </article>
+
+            <article class="detail-card">
+              <h3><i class="ti ti-code" aria-hidden="true"></i><span data-key="code_title">Extrait de code</span></h3>
+              <pre class="code-block"><code id="d-code"></code></pre>
+            </article>
+
+            <article class="detail-card">
+              <h3><i class="ti ti-chart-bar" aria-hidden="true"></i><span data-key="skills_title">Competences developpees</span></h3>
+              <div id="d-skills"></div>
+            </article>
+
+            <article class="detail-card full">
+              <h3><i class="ti ti-download" aria-hidden="true"></i><span data-key="docs_title">Documents & rapports</span></h3>
+              <div class="docs-grid" id="d-docs"></div>
+            </article>
+          </div>
+
+          <div class="nav-proj-btns" id="proj-nav-btns"></div>
+        </div>
+      </section>
+
+      <section class="section" id="s-contact" aria-labelledby="contact-title">
+        <div class="content-wrap">
+          <h2 class="section-title" id="contact-title" data-key="contact_title">Me <span>contacter</span></h2>
+          <p class="section-sub" data-key="contact_sub">Pour une alternance, un projet, une question ou simplement echanger.</p>
+
+          <div class="contact-grid">
+            <div class="contact-info" aria-label="Informations de contact">
+              <a class="contact-item" href="mailto:ewan@example.com">
+                <span class="contact-icon"><i class="ti ti-mail" aria-hidden="true"></i></span>
+                <span><strong data-key="ci1">Email</strong>ewan@example.com</span>
+              </a>
+              <a class="contact-item" href="https://github.com/ewan-dev" target="_blank" rel="noreferrer">
+                <span class="contact-icon"><i class="ti ti-brand-github" aria-hidden="true"></i></span>
+                <span><strong>GitHub</strong>github.com/ewan-dev</span>
+              </a>
+              <a class="contact-item" href="https://linkedin.com/in/ewan" target="_blank" rel="noreferrer">
+                <span class="contact-icon"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></span>
+                <span><strong>LinkedIn</strong>linkedin.com/in/ewan</span>
+              </a>
+              <div class="contact-item">
+                <span class="contact-icon"><i class="ti ti-map-pin" aria-hidden="true"></i></span>
+                <span><strong data-key="ci2">Localisation</strong>Orsay, Ile-de-France</span>
+              </div>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+              <input type="text" name="name" data-key-ph="cf1" placeholder="Votre nom" autocomplete="name" required>
+              <input type="email" name="email" data-key-ph="cf2" placeholder="Votre email" autocomplete="email" required>
+              <input type="text" name="subject" data-key-ph="cf3" placeholder="Sujet" required>
+              <textarea name="message" data-key-ph="cf4" placeholder="Votre message..." required></textarea>
+              <button type="submit">
+                <i class="ti ti-send" aria-hidden="true"></i>
+                <span data-key="cf5">Envoyer le message</span>
+              </button>
+              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="p-footer">
+      <span data-key="footer">© 2026 Ewan - BUT Reseaux & Telecoms</span>
+      <div class="p-footer-links">
+        <button type="button" data-section-link="home" data-key="nav_home">Accueil</button>
+        <button type="button" data-section-link="projects" data-key="nav_projects">Mes projets</button>
+        <button type="button" data-section-link="contact" data-key="nav_contact">Contact</button>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
