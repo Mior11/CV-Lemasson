@@ -9,10 +9,26 @@
   --text-light: #9b7a8b;
   --gold: #d4a853;
   --white: #fff;
+  --nav-bg: rgb(255 255 255 / 92%);
+  --hero-bg: linear-gradient(135deg, var(--rose-light), var(--white));
   --radius: 10px;
   --shadow: 0 14px 35px rgb(61 43 53 / 8%);
 }
-
+body[data-theme="dark"] {
+  --rose: #634659;
+  --rose-light: #241922;
+  --mauve: #b88eb1;
+  --mauve-deep: #e2b7d8;
+  --cream: #130f14;
+  --text-dark: #f6eaf2;
+  --text-mid: #d2b9ca;
+  --text-light: #a98fa0;
+  --gold: #f0c66d;
+  --white: #1b151d;
+  --nav-bg: rgb(27 21 29 / 92%);
+  --hero-bg: linear-gradient(135deg, #241922, #1b151d);
+  --shadow: 0 18px 40px rgb(0 0 0 / 28%);
+}
 *,
 *::before,
 *::after {
@@ -30,6 +46,7 @@ body {
   color: var(--text-dark);
   background: var(--cream);
   line-height: 1.6;
+  transition: background .2s, color .2s;
 }
 
 button,
@@ -66,6 +83,7 @@ a {
   min-height: 64px;
   padding: .65rem 1.5rem;
   background: rgb(255 255 255 / 92%);
+  background: var(--nav-bg);
   border-bottom: 1px solid var(--rose);
   backdrop-filter: blur(12px);
 }
@@ -143,6 +161,18 @@ a {
   border-radius: 999px;
 }
 
+.theme-toggle {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  color: var(--mauve-deep);
+  background: var(--rose-light);
+  border: 1px solid var(--rose);
+  border-radius: 50%;
+  font-size: 1rem;
+}
+
 .lang-btn {
   height: 100%;
   padding-inline: .75rem;
@@ -196,6 +226,7 @@ a {
   align-items: center;
   gap: 2rem;
   background: linear-gradient(135deg, var(--rose-light), var(--white));
+  background: var(--hero-bg);
 }
 
 .hero-text {
