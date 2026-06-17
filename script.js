@@ -256,7 +256,143 @@ skills: [
     docs: [["Portfolio", "HTML"], ["CV", "PDF"]]
   }
 ];
+const skillDescriptions = {
 
+  "Cybersécurité": {
+    category: "Cybersécurité",
+    explanation: "Protection des systèmes, réseaux et données contre les attaques informatiques."
+  },
+
+  "Sensibilisation au Risques": {
+    category: "Cybersécurité",
+    explanation: "Comprendre les dangers du numérique et adopter les bons réflexes."
+  },
+
+  "Propreté d'un site": {
+    category: "Bonnes pratiques",
+    explanation: "Respect des règles de sécurité, de confidentialité et d'organisation."
+  },
+
+  "Adressage IP": {
+    category: "Réseau",
+    explanation: "Attribuer une adresse unique à chaque équipement d'un réseau."
+  },
+
+  "Diagnostic réseau": {
+    category: "Réseau",
+    explanation: "Trouver l'origine d'un problème de connexion ou de communication."
+  },
+
+  "Topologie réseau": {
+    category: "Réseau",
+    explanation: "Comprendre comment les équipements sont reliés entre eux."
+  },
+
+  "Mesurer un signal Wi-fi": {
+    category: "Télécommunications",
+    explanation: "Observer la qualité et la puissance d'un signal sans fil."
+  },
+
+  "Analyser les transmissions": {
+    category: "Télécommunications",
+    explanation: "Étudier le trajet et le comportement des données transmises."
+  },
+
+  "Etudes des bandes de fréquences": {
+    category: "Télécommunications",
+    explanation: "Comprendre quelles fréquences sont utilisées pour transmettre des informations."
+  },
+
+  "HTML/CSS": {
+    category: "Développement Web",
+    explanation: "Créer la structure et l'apparence d'un site web."
+  },
+
+  "Design Web": {
+    category: "Développement Web",
+    explanation: "Concevoir une interface agréable et facile à utiliser."
+  },
+
+  "Présentation": {
+    category: "Communication",
+    explanation: "Mettre en valeur des informations de manière claire."
+  },
+
+  "Traitement de donnees": {
+    category: "Données",
+    explanation: "Collecter, organiser et analyser des informations."
+  },
+
+  "Rigueur": {
+    category: "Compétence humaine",
+    explanation: "Travailler avec précision et méthode."
+  },
+
+  "Synthese": {
+    category: "Compétence humaine",
+    explanation: "Résumer des informations complexes."
+  },
+
+  "Conception LAN": {
+    category: "Réseau",
+    explanation: "Concevoir un réseau local adapté aux besoins."
+  },
+
+  "Configuration reseau": {
+    category: "Réseau",
+    explanation: "Configurer les équipements réseau."
+  },
+
+  "Tests": {
+    category: "Validation",
+    explanation: "Vérifier le bon fonctionnement d'une solution."
+  },
+
+  "Administration systeme": {
+    category: "Système",
+    explanation: "Gérer et maintenir des serveurs."
+  },
+
+  "Deploiement": {
+    category: "Système",
+    explanation: "Installer et mettre en service une solution informatique."
+  },
+
+  "Documentation": {
+    category: "Professionnel",
+    explanation: "Produire des documents techniques compréhensibles."
+  },
+
+  "Gestion de projet": {
+    category: "Organisation",
+    explanation: "Planifier et suivre un projet."
+  },
+
+  "Integration technique": {
+    category: "Technique",
+    explanation: "Assembler plusieurs technologies dans une même solution."
+  },
+
+  "Travail en equipe": {
+    category: "Compétence humaine",
+    explanation: "Collaborer efficacement avec plusieurs personnes."
+  },
+
+  "Valorisation du profil": {
+    category: "Communication",
+    explanation: "Présenter ses compétences et réalisations."
+  },
+
+  "Redaction": {
+    category: "Communication",
+    explanation: "Rédiger des contenus clairs et professionnels."
+  },
+
+  "Web": {
+    category: "Développement Web",
+    explanation: "Créer et maintenir des projets web."
+  }
+};
 let currentLang = "fr";
 
 const sectionButtons = document.querySelectorAll("[data-section-link]");
@@ -325,12 +461,27 @@ function openProject(projectId) {
     </div>
   `;
 
-  document.querySelector("#d-skills").innerHTML = project.skills.map(([name, value]) => `
-    <div class="skill-row">
-      <div class="skill-row-top"><span>${name}</span><span class="pct">${value}%</span></div>
-      <div class="progress-bar"><div class="progress-fill" style="width:${value}%"></div></div>
+document.querySelector("#d-skills").innerHTML =
+project.skills.map(skill => {
+
+  const info = skillDescriptions[skill];
+
+  return `
+    <div class="skill-card">
+
+      <span class="skill-category">
+        ${info?.category || "Compétence"}
+      </span>
+
+      <button
+        class="skill-link"
+        data-skill="${skill}">
+        ${skill}
+      </button>
+
     </div>
-  `).join("");
+  `;
+}).join("");
 
   document.querySelector("#d-docs").innerHTML = project.docs.map(([name, type]) => `
     <a class="pdf-btn" href="#" aria-label="${name}">
