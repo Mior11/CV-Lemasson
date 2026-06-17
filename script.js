@@ -100,7 +100,11 @@ const projects = [
     screenshots: ["Support de sensibilisation", "Synthese des risques"],
     schema: ["Utilisateur", "Menaces", "Bonnes pratiques"],
     code: "Objectifs :\n- Identifier les risques courants\n- Appliquer les bonnes pratiques\n- Sensibiliser un public non specialiste",
-    skills: [["Cybersecurite de base", 75], ["Analyse des risques", 70], ["Communication", 72]],
+skills: [
+    "Cybersecurité",
+    "Sensibilisation au Risques",
+    "Propreté d'un site"
+]
     docs: [["file": "assets/docs/cours-sae11-2023.pdf", "PDF"], ["file": "assets/docs/synthese-sae101.pdf", "PDF"]]
     
   },
@@ -116,7 +120,11 @@ const projects = [
     screenshots: ["Plan d'adressage", "Tests de connectivite"],
     schema: ["PC", "Switch", "Routeur"],
     code: "ipconfig /all\nping 192.168.1.1\ntracert 8.8.8.8",
-    skills: [["Adressage IP", 78], ["Diagnostic reseau", 72], ["Topologie", 70]],
+    skills: [
+    "Adressage IP",
+    "Diagnostic réseau",
+    "Topologie réseau"
+]
     docs: [["Compte rendu SAE 1.02", "PDF"], ["Plan reseau", "PDF"]]
   },
     {
@@ -131,7 +139,11 @@ const projects = [
     screenshots: ["Montage de mesure", "Resultats observes"],
     schema: ["Emetteur", "Support", "Recepteur"],
     code: "Grandeurs observees :\n- frequence\n- amplitude\n- attenuation\n- bruit",
-    skills: [["Mesure de signal", 70], ["Analyse technique", 68], ["Telecoms", 72]],
+    skills: [
+     "Mesurer un signal Wi-fi",
+     "Analyser les transmissions",
+     "Etudes des bandes de fréquences"
+   ]
     docs: [["Rapport SAE 1.03", "PDF"], ["Tableau de mesures", "PDF"]]
   },
   {
@@ -146,7 +158,11 @@ const projects = [
     screenshots: ["Page d'accueil", "Section projets"],
     schema: ["Contenu", "HTML", "CSS"],
     code: "<section class=\"profile\">\n  <h1>Ewan</h1>\n  <p>Etudiant en BUT R&T</p>\n</section>",
-    skills: [["HTML / CSS", 80], ["Design web", 72], ["Presentation", 78]],
+skills: [
+    "HTML/CSS",
+    "Design Web",
+    "Présentation"
+]
     docs: [["Portfolio SAE 1.04", "HTML"], ["Maquette", "PNG"]]
   },
   {
@@ -161,7 +177,7 @@ const projects = [
     screenshots: ["Jeu de donnees", "Resultats"],
     schema: ["Donnees brutes", "Traitement", "Synthese"],
     code: "Etapes :\n1. Importer les donnees\n2. Nettoyer les valeurs\n3. Produire une synthese",
-    skills: [["Traitement de donnees", 76], ["Rigueur", 74], ["Synthese", 70]],
+    skills: ["Traitement de donnees", "Rigueur", "Synthese"],
     docs: [["Fichier de donnees", "XLSX"], ["Compte rendu", "PDF"]]
   },
   {
@@ -176,7 +192,7 @@ const projects = [
     screenshots: ["Topologie reseau", "Tests de ping"],
     schema: ["Postes", "Switch", "Routeur", "Internet"],
     code: "interface vlan 10\n ip address 192.168.10.1 255.255.255.0\n no shutdown",
-    skills: [["Conception LAN", 82], ["Configuration reseau", 78], ["Tests", 76]],
+    skills: ["Conception LAN", "Configuration reseau","Tests"],
     docs: [["Dossier SAE 2.01", "PDF"], ["Schema reseau", "PNG"]]
   },
   {
@@ -191,7 +207,7 @@ const projects = [
     screenshots: ["Courbe de mesure", "Tableau de resultats"],
     schema: ["Signal d'entree", "Systeme", "Signal de sortie"],
     code: "Mesures :\n- amplitude\n- frequence\n- attenuation\n- rapport signal/bruit",
-    skills: [["Instrumentation", 74], ["Analyse de mesures", 76], ["Interpretation", 72]],
+    skills: ["Instrumentation", "Analyse de mesures", "Interpretation"],
     docs: [["Rapport SAE 2.02", "PDF"], ["Mesures", "CSV"]]
   },
     {
@@ -206,7 +222,7 @@ const projects = [
     screenshots: ["Service installe", "Test d'acces"],
     schema: ["Client", "Serveur", "Service"],
     code: "sudo systemctl status service\nsudo systemctl enable service\nsudo systemctl restart service",
-    skills: [["Administration systeme", 78], ["Deploiement", 80], ["Documentation", 74]],
+    skills: ["Administration systeme", "Deploiement","Documentation"],
     docs: [["Procedure SAE 2.03", "PDF"], ["Compte rendu", "PDF"]]
   },
   {
@@ -221,7 +237,7 @@ const projects = [
     screenshots: ["Architecture globale", "Resultats de tests"],
     schema: ["Besoin", "Solution", "Validation"],
     code: "Livrables :\n- cahier des charges\n- realisation technique\n- tests\n- presentation",
-    skills: [["Gestion de projet", 76], ["Integration technique", 78], ["Travail en equipe", 80]],
+    skills: ["Gestion de projet", "Integration technique","Travail en equipe"],
     docs: [["Dossier SAE 2.04", "PDF"], ["Presentation", "PDF"]]
   },
   {
@@ -236,7 +252,7 @@ const projects = [
     screenshots: ["Portfolio", "Presentation des SAE"],
     schema: ["Projets", "Competences", "CV"],
     code: "Objectif :\nmettre en valeur les projets BUT1\net expliquer les competences acquises.",
-    skills: [["Valorisation du profil", 82], ["Redaction", 78], ["Web", 80]],
+    skills: ["Valorisation du profil","Redaction", "Web"],
     docs: [["Portfolio", "HTML"], ["CV", "PDF"]]
   }
 ];
