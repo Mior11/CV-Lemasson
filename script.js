@@ -85,7 +85,7 @@ const translations = {
   }
 };
 
-const CONTACT_EMAIL = "ewan@example.com";
+const CONTACT_EMAIL = "lemasson.ewan@gmail.com";
 
 const projects = [
   {
@@ -434,7 +434,37 @@ function renderProjects() {
 function openProject(projectId) {
   const project = projects.find((item) => item.id === projectId);
   if (!project) return;
+  document.addEventListener("click", (e) => {
 
+  if (!e.target.classList.contains("skill-link")) return;
+
+  const skill = e.target.dataset.skill;
+
+  const info = skillDescriptions[skill];
+
+  if (!info) return;
+
+  document.querySelector("#skillsContent").innerHTML = `
+
+    <div class="detail-card">
+
+      <h3>${skill}</h3>
+
+      <span class="skill-category">
+        ${info.category}
+      </span>
+
+      <p style="margin-top:15px;">
+        ${info.explanation}
+      </p>
+
+    </div>
+
+  `;
+
+  showSection("skills");
+
+});
   document.querySelector("#d-icon").className = `detail-icon ${project.theme}`;
   document.querySelector("#d-icon").innerHTML = `<i class="${project.icon}" aria-hidden="true"></i>`;
   document.querySelector("#d-badge").textContent = project.badge;
