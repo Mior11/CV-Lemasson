@@ -86,7 +86,26 @@ const translations = {
 };
 
 const CONTACT_EMAIL = "lemasson.ewan@gmail.com";
+const themeToggle =
+document.getElementById("themeToggle");
 
+themeToggle.addEventListener("click", () => {
+
+  const dark =
+  document.body.dataset.theme === "dark";
+
+  document.body.dataset.theme =
+  dark ? "light" : "dark";
+
+  localStorage.setItem(
+    "theme",
+    document.body.dataset.theme
+  );
+
+});
+
+document.body.dataset.theme =
+localStorage.getItem("theme") || "light";
 const projects = [
   {
     id: "sae101",
