@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAE - Ewan.dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body data-page="sae" data-project="sae105">
+  <div class="pw">
+    <nav class="p-nav" aria-label="Navigation principale">
+      <a class="p-nav-logo" href="../index.html">Ewan<span>.</span>dev</a>
+      <div class="p-nav-links">
+        <a href="../index.html" data-key="nav_home">Accueil</a>
+        <a href="../index.html#about" data-key="nav_about">A propos</a>
+        <a href="../index.html#projects" data-key="nav_projects">Mes projets</a>
+        <a href="../index.html#contact" data-key="nav_contact">Contact</a>
+      </div>
+      <div class="nav-right">
+        <button class="theme-toggle" type="button" id="themeToggle" aria-label="Activer le mode sombre">
+          <i class="ti ti-moon" aria-hidden="true"></i>
+        </button>
+        <div class="lang-switcher" aria-label="Choix de la langue">
+          <button class="lang-btn active" type="button" data-lang="fr">FR</button>
+          <button class="lang-btn" type="button" data-lang="en">EN</button>
+        </div>
+        <a class="p-cv-btn" href="../assets/docs/CV LEMASSON Ewan.pdf" download data-key="nav_cv">
+          <i class="ti ti-download" aria-hidden="true"></i>
+          Telecharger CV
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="section active" id="s-detail">
+        <div class="content-wrap">
+          <a class="back-btn" href="../index.html#projects">
+            <i class="ti ti-arrow-left" aria-hidden="true"></i>
+            <span data-key="back_btn">Retour aux projets</span>
+          </a>
+
+          <div class="detail-header">
+            <div class="detail-icon" id="d-icon" aria-hidden="true"></div>
+            <div class="detail-meta">
+              <span class="proj-badge" id="d-badge"></span>
+              <h1 id="d-title"></h1>
+              <div class="detail-tags" id="d-tags"></div>
+            </div>
+          </div>
+
+          <div class="detail-body">
+            <article class="detail-card full">
+              <h2><i class="ti ti-file-text" aria-hidden="true"></i><span data-key="desc_title">Description du projet</span></h2>
+              <p id="d-desc"></p>
+            </article>
+
+            <article class="detail-card">
+              <h2><i class="ti ti-photo" aria-hidden="true"></i><span data-key="screenshots_title">Captures & preuves</span></h2>
+              <div class="screenshot-grid" id="d-screenshots"></div>
+            </article>
+
+            <article class="detail-card">
+              <h2><i class="ti ti-topology-star" aria-hidden="true"></i><span data-key="schema_title">Schema d'architecture</span></h2>
+              <div id="d-schema"></div>
+            </article>
+
+            <article class="detail-card">
+              <h2><i class="ti ti-code" aria-hidden="true"></i><span data-key="code_title">Extrait de code</span></h2>
+              <pre class="code-block"><code id="d-code"></code></pre>
+            </article>
+
+            <article class="detail-card">
+              <h2><i class="ti ti-chart-bar" aria-hidden="true"></i><span data-key="skills_title">Competences developpees</span></h2>
+              <div id="d-skills"></div>
+            </article>
+
+            <article class="detail-card full">
+              <h2><i class="ti ti-download" aria-hidden="true"></i><span data-key="docs_title">Documents & rapports</span></h2>
+              <div class="docs-grid" id="d-docs"></div>
+            </article>
+          </div>
+
+          <div class="nav-proj-btns" id="proj-nav-btns"></div>
+
+          <div style="padding-top:1.5rem;">
+            <h2 class="section-title" data-key="skill_detail_title">Competence <span>detaillee</span></h2>
+            <div id="skillsContent"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="p-footer">
+      <span data-key="footer">Â© 2026 LEMASSON Ewan - BUT Reseaux & Telecoms</span>
+      <div class="p-footer-links">
+        <a href="../index.html" data-key="nav_home">Accueil</a>
+        <a href="../index.html#projects" data-key="nav_projects">Mes projets</a>
+        <a href="../index.html#contact" data-key="nav_contact">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../data/projects.js"></script>
+  <script src="../script.js"></script>
+</body>
+</html>
+
